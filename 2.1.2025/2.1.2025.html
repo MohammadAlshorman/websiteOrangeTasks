@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1.2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9fafc;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            width: 60%;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        strong {
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><a href="https://codepen.io/mohammad-al-shorman/pen/LEPOOvQ">source code </a></h1>
+    <div class="container">
+        <p><strong>1. Fortune Teller:</strong> <span id="fortune"></span></p>
+        <p><strong>2. Dog Age Calculator:</strong> <span id="dogAge"></span></p>
+        <p><strong>3. Lifetime Supply Calculator:</strong> <span id="supply"></span></p>
+        <p><strong>4. Greeting Function:</strong> <span id="greet"></span></p>
+        <p><strong>5. what is the error:</strong> <img src="1.png" alt=""> </p>
+        <p><strong>6. fix these functions:</strong><img src="2.png" alt=""> </p>
+        <p><strong>7. Cube Calculator:</strong> <span id="cube"></span></p>
+        <p><strong>8. Multiply Function:</strong> <span id="multiply"></span></p>
+    </div>
+
+    <script>
+        // 1. tellFortune
+        function tellFortune(jobTitle, location, partnerName, numberOfChildren) {
+            return `You will be a ${jobTitle} in ${location}, and married to ${partnerName} with ${numberOfChildren} kids.`;
+        }
+        document.getElementById('fortune').textContent = tellFortune('Software Engineer', 'IRBID', 'SHORMAN', 1);
+
+        // 2. calculateDogAge
+        function calculateDogAge(puppyAge) {
+            return `Your doggie is ${puppyAge * 7} years old in dog years!`;
+        }
+        document.getElementById('dogAge').textContent = calculateDogAge(1);
+
+        // 3. calculateSupply
+        function calculateSupply(age, amountPerDay) {
+            const maxAge = 100;
+            const totalNeeded = (maxAge - age) * amountPerDay * 365;
+            return `You will need ${totalNeeded} units to last you until the ripe old age of ${maxAge}.`;
+        }
+        document.getElementById('supply').textContent = calculateSupply(30, 3);
+
+        // 4. greet
+        function greet(name) {
+            return `Hello ${name}`;
+        }
+        document.getElementById('greet').textContent = greet('Adam');
+
+        // 5. cube
+        function cube(number) {
+            return number ** 3;
+        }
+        document.getElementById('cube').textContent = `The cube of 4 is ${cube(4)}`;
+
+        // 6. multiply
+        function multiply(a, b) {
+            return a * b;
+        }
+        document.getElementById('multiply').textContent = `5 multiplied by 6 is ${multiply(5, 10)}`;
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

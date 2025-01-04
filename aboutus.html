@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAdVBMVEX/eQD/eAD/ij3/////dgD/cgD/dAD/cAD/agD/bgD/9O7/vJn//fz/zLX/hjX/k07/x6z/roP/0Lr/wqX/59v/3c3/gy7/wKD/6uH/ZQD/zLH/+fX/jUr/n2v/l1v/s4v/tZL/fyP/1cL/pXX/nGP/WwD/fBclmf5nAAABs0lEQVRIie3T23KjMAwGYJtftmxO4QxpCAnk8P6PuDJJ2+zsxbad6R2+ICPZH5I1RKkfLR39zG1wgxvc4AY3uMEN/jokQ1bZ70M69tPJJOb7FX0yt2XxhJq9N1opw8RW0SMKPXlvQxX2xkpGG9kwfV5W5wekuRqG2mqTLWN78lM7NLWlKRvLpjmzMlPbnC9LTrYehkKTJkvrHakDUiBmfwDQX5EuA1rXS7IBjmYCWtkYnWQXObb2GCC3qBwPOLsYy3g3F745pC5Bw/sK9X7A5HIgumC53XqU9h26FB2ZEu0+RmQ1R5lUDjBjU6BmpEbJO6MCcdPEqPgDAkrb4wp3ZEukyfEBTYD0hHmG9k3WZ0UfY2JXo1ohHzA7/QKlodyTtJqg2HvHn3c0CQ6nBNi5Jyx3zSuUgfSxDGeG7LS40jtUfpGh4RSmuraKME2ZamVMhoJJomHAyJdwrLUfFUXm5eVulJ670MB8vfs8om7Mte7GTvPtHt3kjmTt9Th79QKV5HQI9Zok+Wxo/QkPXpBNPQ4covWY+tq/gyK5IOKRXpMC9X8XuW53d/bvXKSir6z8n8z0BwHFGrE2FHHgAAAAAElFTkSuQmCC"
+        type="image/x-icon">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css'> -->
+
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            font-family: Nunito, sans-serif;
+        }
+
+        .text-blk {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            line-height: 25px;
+        }
+
+        .responsive-container-block {
+            min-height: 75px;
+            height: fit-content;
+            width: 100%;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            justify-content: flex-start;
+        }
+
+        .responsive-container-block.bigContainer {
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            background-image: url("https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb29.png");
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: cover;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+
+        }
+
+        .responsive-container-block.Container {
+            max-width: 800px;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            margin-top: 150px;
+            margin-right: auto;
+            margin-bottom: 150px;
+            margin-left: auto;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .text-blk.heading {
+            font-size: 36px;
+            line-height: 45px;
+            font-weight: 800;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 30px;
+            margin-left: 0px;
+        }
+
+        .text-blk.subHeading {
+            text-align: center;
+            font-size: 18px;
+            line-height: 26px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 60px;
+            margin-left: 0px;
+        }
+
+        .socialIcon {
+            width: 33px;
+            height: 33px;
+        }
+
+        .social-icons-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .social-icon {
+            margin: 0 50px 0 50px;
+        }
+
+        .social-icon:hover {
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .text-blk.heading {
+                font-size: 55px;
+                line-height: 65px;
+            }
+
+            .text-blk.subHeading {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .socialIcon {
+                width: 20px;
+                height: 20px;
+            }
+
+            .text-blk.subHeading {
+                line-height: 27px;
+            }
+
+            .text-blk.heading {
+                font-size: 32px;
+                line-height: 40px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 20px;
+                margin-left: 0px;
+            }
+
+            .social-icon {
+                margin: 0 25px 0 25px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .responsive-container-block.bigContainer {
+                padding-top: 10px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+            }
+
+            .text-blk.heading {
+                font-size: 45px;
+                line-height: 55px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 20px;
+                margin-left: 0px;
+            }
+
+            .text-blk.subHeading {
+                font-size: 14px;
+                line-height: 22px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-bottom: 30px;
+                margin-left: 0px;
+            }
+
+            .social-icons-container {
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .text-blk.subHeading {
+                font-size: 16px;
+                line-height: 23px;
+            }
+
+            .text-blk.heading {
+                font-size: 26px;
+                line-height: 30px;
+            }
+
+            .social-icon {
+                margin: 0 20px 0 20px;
+            }
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wk-desk-1 {
+            width: 8.333333%;
+        }
+
+        .wk-desk-2 {
+            width: 16.666667%;
+        }
+
+        .wk-desk-3 {
+            width: 25%;
+        }
+
+        .wk-desk-4 {
+            width: 33.333333%;
+        }
+
+        .wk-desk-5 {
+            width: 41.666667%;
+        }
+
+        .wk-desk-6 {
+            width: 50%;
+        }
+
+        .wk-desk-7 {
+            width: 58.333333%;
+        }
+
+        .wk-desk-8 {
+            width: 66.666667%;
+        }
+
+        .wk-desk-9 {
+            width: 75%;
+        }
+
+        .wk-desk-10 {
+            width: 83.333333%;
+        }
+
+        .wk-desk-11 {
+            width: 91.666667%;
+        }
+
+        .wk-desk-12 {
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .wk-ipadp-1 {
+                width: 8.333333%;
+            }
+
+            .wk-ipadp-2 {
+                width: 16.666667%;
+            }
+
+            .wk-ipadp-3 {
+                width: 25%;
+            }
+
+            .wk-ipadp-4 {
+                width: 33.333333%;
+            }
+
+            .wk-ipadp-5 {
+                width: 41.666667%;
+            }
+
+            .wk-ipadp-6 {
+                width: 50%;
+            }
+
+            .wk-ipadp-7 {
+                width: 58.333333%;
+            }
+
+            .wk-ipadp-8 {
+                width: 66.666667%;
+            }
+
+            .wk-ipadp-9 {
+                width: 75%;
+            }
+
+            .wk-ipadp-10 {
+                width: 83.333333%;
+            }
+
+            .wk-ipadp-11 {
+                width: 91.666667%;
+            }
+
+            .wk-ipadp-12 {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wk-tab-1 {
+                width: 8.333333%;
+            }
+
+            .wk-tab-2 {
+                width: 16.666667%;
+            }
+
+            .wk-tab-3 {
+                width: 25%;
+            }
+
+            .wk-tab-4 {
+                width: 33.333333%;
+            }
+
+            .wk-tab-5 {
+                width: 41.666667%;
+            }
+
+            .wk-tab-6 {
+                width: 50%;
+            }
+
+            .wk-tab-7 {
+                width: 58.333333%;
+            }
+
+            .wk-tab-8 {
+                width: 66.666667%;
+            }
+
+            .wk-tab-9 {
+                width: 75%;
+            }
+
+            .wk-tab-10 {
+                width: 83.333333%;
+            }
+
+            .wk-tab-11 {
+                width: 91.666667%;
+            }
+
+            .wk-tab-12 {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .wk-mobile-1 {
+                width: 8.333333%;
+            }
+
+            .wk-mobile-2 {
+                width: 16.666667%;
+            }
+
+            .wk-mobile-3 {
+                width: 25%;
+            }
+
+            .wk-mobile-4 {
+                width: 33.333333%;
+            }
+
+            .wk-mobile-5 {
+                width: 41.666667%;
+            }
+
+            .wk-mobile-6 {
+                width: 50%;
+            }
+
+            .wk-mobile-7 {
+                width: 58.333333%;
+            }
+
+            .wk-mobile-8 {
+                width: 66.666667%;
+            }
+
+            .wk-mobile-9 {
+                width: 75%;
+            }
+
+            .wk-mobile-10 {
+                width: 83.333333%;
+            }
+
+            .wk-mobile-11 {
+                width: 91.666667%;
+            }
+
+            .wk-mobile-12 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- partial:index.partial.html -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 style="font-size:larger;">M7MD SHORMAN🤍</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Tasks orange</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Open Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://mohammadportfolio-eta.vercel.app/">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/MohammadAlshorman">github</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="responsive-container-block bigContainer">
+                <div class="responsive-container-block Container">
+                    <p class="text-blk heading" style="color: #FF7900;">
+                        About Us
+                    </p>
+                    <p class="text-blk subHeading" style="color: black;">
+                        Welcome to <span style="color:  #FF7900;">Orange</span> Solutions Platform, your one-stop
+                        destination for accurate and detailed
+                        solutions for all <span style="color:  #FF7900;">Orange</span> tasks.
+
+                        We are a specialized team that aims to facilitate the learning and training experience for
+                        <span style="color:  #FF7900;">Orange Academy</span> students by providing clear,
+                        reliable, and constantly updated solutions that
+                        contribute to enhancing your programming and professional skills.
+                    </p>
+                    <div class="social-icons-container">
+                        <a href="">
+                            <img class="social-svg" id="is9ym"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                        </a>
+                        <a href="">
+                            <img class="social-svg" id="i706n"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                        </a>
+                        <a href="">
+                            <img class="social-svg" id="ib9ve"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                        </a>
+                        <a href="">
+                            <img class="social-svg" id="ie9fx"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="./script_index.js"></script>
+
+</body>
+
+</html>
