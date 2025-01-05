@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            position: relative;
+            display: none;
+            flex-direction: column;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 15px;
+
+        }
+
+
+
+        .hamburger {
+            font-size: 5vh;
+            display: block;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #FF7900;
+            color: white;
+            text-align: right;
+            width: 100%;
+        }
+
+        #logo {
+            left: 2px;
+            top: -48px;
+
+            position: absolute;
+        }
+
+        @media (min-width: 768px) {
+            .menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .menu a {
+                border: none;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            #logo {
+                left: 2px;
+                top: -50px;
+                position: absolute;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <a href="#" id="logo">Alshorman</a>
+        <a href="#">Home</a>
+        <a href="#">Articals</a>
+        <a href="#">About us</a>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
