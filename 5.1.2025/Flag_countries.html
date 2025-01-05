@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختر دولة واكتشف علمها</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    label {
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    select {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    #flag {
+      margin-top: 20px;
+    }
+
+    #flag img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="/index.html" style="text-align: center; font-size: 50px;">Home Page</a><br><br><br><br><br><br><br><br><br>
+
+  <label for="countries">اختر دولة واكتشف علمها</label>
+  <select id="countries">
+    <option value="">-- اختر دولة --</option>
+    <option value="switzerland">سويسرا</option>
+    <option value="palestine">فلسطين</option>
+    <option value="jordan">الأردن</option>
+  </select>
+
+  <div id="flag"></div>
+
+  <script>
+    const countriesSelect = document.getElementById('countries');
+    const flagDiv = document.getElementById('flag');
+
+    countriesSelect.addEventListener('change', () => {
+      const selectedCountry = countriesSelect.value;
+      let flagImage = '';
+
+      switch (selectedCountry) {
+        case 'switzerland':
+          flagImage = 'https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg';
+          break;
+        case 'palestine':
+          flagImage = 'https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg';
+          break;
+        case 'jordan':
+          flagImage = 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg';
+          break;
+        default:
+          flagImage = '';
+      }
+
+      if (flagImage) {
+        flagDiv.innerHTML = `<img src="${flagImage}" alt="علم ${selectedCountry}">`;
+      } else {
+        flagDiv.innerHTML = '';
+      }
+    });
+  </script>
+
+</body>
+
+</html>

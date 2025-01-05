@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد الشرمان</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #FF7900;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        /* زر الرجوع لأعلى */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            background: #FF7900;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        #backToTop:hover {
+            color: white;
+            background: black;
+        }
+
+        footer {
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+            background: #FF7900;
+        }
+    </style>
+</head>
+
+<body align="right">
+
+    <!-- الهيدر -->
+    <header>
+        <h1>مرحبًا بكم في صفحة محمد الشرمان</h1>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main>
+        <section>
+            <h2>من هو محمد الشرمان؟</h2>
+            <p>محمد الشرمان هو مطور ويب ذو خبرة في تصميم وتطوير المواقع الإلكترونية باستخدام HTML، CSS، وJavaScript.</p>
+        </section>
+
+        <section>
+            <h2>الخبرات والمهارات</h2>
+            <ul>
+                <li>تطوير تطبيقات ويب باستخدام React وAPIs.</li>
+                <li>تصميم واجهات المستخدم باستخدام Figma.</li>
+                <li>إتقان HTML، CSS، JavaScript وBootstrap.</li>
+                <li>إنشاء صفحات ويب متجاوبة وسريعة.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>إنجازاته</h2>
+            <ul>
+                <li>إنشاء تطبيق للطقس باستخدام React وتقنيات حديثة.</li>
+                <li>تصميم الصفحة الرئيسية لشركة أورنج باستخدام Figma.</li>
+                <li>المشاركة في مشاريع تطوير واجهات الويب في أكاديمية أورنج.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>أهدافه</h2>
+            <p>يهدف محمد إلى تحقيق التميز في مجال تطوير الويب وتقديم حلول تقنية مبتكرة.</p>
+        </section>
+
+        <section>
+            <h2>تواصل معنا</h2>
+            <p><strong>mhmdshhadhalshrman95@gmail.com
+                </strong>يمكنكم التواصل مع محمد عبر البريد الإلكتروني: </p>
+            <p>رقم الهاتف <strong>0777077970
+                </strong></p>
+        </section>
+    </main>
+
+    <!-- زر العودة لأعلى الصفحة -->
+    <button id="backToTop">⬆️ للأعلى</button>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2090 صفحة محمد الشرمان. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // الحصول على الزر
+        const backToTopButton = document.getElementById('backToTop');
+
+        // إظهار/إخفاء الزر عند التمرير
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight / 2) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // التمرير لأعلى الصفحة عند النقر على الزر
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+
+</html>
