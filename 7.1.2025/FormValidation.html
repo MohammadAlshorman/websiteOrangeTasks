@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form Validation</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header,
+        footer {
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .message {
+            font-size: 14px;
+            margin: 5px 0 15px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Form Validation</h1>
+        <h1><a href="/index.html">Home page </a></h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="fname">Enter a Fname:</label>
+            <input type="text" id="fname" oninput="validateFname()">
+            <p id="fnameMsg" class="message"></p>
+
+            <label for="lname">Enter a Lname:</label>
+            <input type="text" id="lname" oninput="validateLname()">
+            <p id="lnameMsg" class="message"></p>
+
+            <label for="bdate">Enter a Bdate:</label>
+            <input type="text" id="bdate" placeholder="dd/mm/yyyy" oninput="validateBdate()">
+            <p id="bdateMsg" class="message"></p>
+
+            <label for="email">Enter an email:</label>
+            <input type="text" id="email" oninput="validateEmail()">
+            <p id="emailMsg" class="message"></p>
+
+            <label for="confirmEmail">Confirm Email:</label>
+            <input type="text" id="confirmEmail" oninput="validateConfirmEmail()">
+            <p id="confirmEmailMsg" class="message"></p>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" oninput="validatePassword()">
+            <p id="passwordMsg" class="message"></p>
+
+            <label for="confirmPassword">Confirm password:</label>
+            <input type="password" id="confirmPassword" oninput="validateConfirmPassword()">
+            <p id="confirmPasswordMsg" class="message"></p>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2090 SHOrMAN All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript validation functions
+        function validateFname() {
+            const fname = document.getElementById("fname").value;
+            const fnameMsg = document.getElementById("fnameMsg");
+            const regex = /^[a-zA-Z]+$/;
+
+            if (!regex.test(fname)) {
+                fnameMsg.textContent = "Numbers are not allowed";
+                fnameMsg.className = "message error";
+            } else {
+                fnameMsg.textContent = "Valid first name";
+                fnameMsg.className = "message success";
+            }
+        }
+
+        function validateLname() {
+            const lname = document.getElementById("lname").value;
+            const lnameMsg = document.getElementById("lnameMsg");
+            const regex = /^[a-zA-Z]+$/;
+
+            if (!regex.test(lname)) {
+                lnameMsg.textContent = "Numbers are not allowed";
+                lnameMsg.className = "message error";
+            } else {
+                lnameMsg.textContent = "Valid last name";
+                lnameMsg.className = "message success";
+            }
+        }
+
+        function validateBdate() {
+            const bdate = document.getElementById("bdate").value;
+            const bdateMsg = document.getElementById("bdateMsg");
+            const regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+
+            if (!regex.test(bdate)) {
+                bdateMsg.textContent = "The format should be dd/mm/yyyy";
+                bdateMsg.className = "message error";
+            } else {
+                bdateMsg.textContent = "Valid birthdate";
+                bdateMsg.className = "message success";
+            }
+        }
+
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const emailMsg = document.getElementById("emailMsg");
+            const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!regex.test(email)) {
+                emailMsg.textContent = "The e-mail is not valid";
+                emailMsg.className = "message error";
+            } else {
+                emailMsg.textContent = "Valid email";
+                emailMsg.className = "message success";
+            }
+        }
+
+        function validateConfirmEmail() {
+            const email = document.getElementById("email").value;
+            const confirmEmail = document.getElementById("confirmEmail").value;
+            const confirmEmailMsg = document.getElementById("confirmEmailMsg");
+
+            if (email !== confirmEmail) {
+                confirmEmailMsg.textContent = "Emails do not match";
+                confirmEmailMsg.className = "message error";
+            } else {
+                confirmEmailMsg.textContent = "Emails match";
+                confirmEmailMsg.className = "message success";
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const passwordMsg = document.getElementById("passwordMsg");
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+            if (!regex.test(password)) {
+                passwordMsg.textContent = "Password must be at least 8 characters, include 1 uppercase letter and 1 number";
+                passwordMsg.className = "message error";
+            } else {
+                passwordMsg.textContent = "Valid password";
+                passwordMsg.className = "message success";
+            }
+        }
+
+        function validateConfirmPassword() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const confirmPasswordMsg = document.getElementById("confirmPasswordMsg");
+
+            if (password !== confirmPassword) {
+                confirmPasswordMsg.textContent = "Passwords do not match";
+                confirmPasswordMsg.className = "message error";
+            } else {
+                confirmPasswordMsg.textContent = "Passwords match";
+                confirmPasswordMsg.className = "message success";
+            }
+        }
+    </script>
+</body>
+
+</html>
