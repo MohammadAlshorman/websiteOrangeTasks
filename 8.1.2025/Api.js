@@ -43,6 +43,11 @@ function displayUsers(users) {
         let card = document.createElement('div');
         card.className = "card";
         card.innerHTML = `
+
+
+
+
+        
             <img src="${user.Image}" alt="${user.name}" class="user-image">
             <h2>${user.name}</h2>
             <p><b>Age: </b><br>${user.Age}</p>
