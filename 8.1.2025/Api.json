@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Mohammad shorman",
+        "Age": 23,
+        "Email": "mhmdshhadhalshrman95@gmail.com",
+        "Profession": "Software Engineering",
+        "Phone": "0777077970",
+        "Image": "https://media.licdn.com/dms/image/v2/D4E35AQGtq11hqMW2zw/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1725192050357?e=1736967600&v=beta&t=_SxBt8apGjqdlg9KDxM89fja1bPt9uX5tO-qvG2g85Q"
+    },
+    {
+        "name": "Mohammed Frehat",
+        "Age": 45,
+        "Email": "gt.mohammad.frhat@orange.com",
+        "Profession": "Coding Academy Manager",
+        "Phone": "0776808599",
+        "Image": "https://media.licdn.com/dms/image/v2/D4E03AQEpwmLfBWVjHw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1702923720788?e=1741824000&v=beta&t=9urskkz4ALWSJhgppPtjGYZBGYjE3dmHRdaOCE2Hb6s"
+    },
+    {
+        "name": "Ayman Al-Jaradat",
+        "Age": 27,
+        "Email": "gt.aiman.aljaradat@orange.com",
+        "Profession": "Lead Trainer at Orange Coding Academy",
+        "Phone": "0776800945",
+        "Image": "https://media.licdn.com/dms/image/v2/D4D03AQHzTJ-gk_BKOw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1691245063093?e=1741824000&v=beta&t=AOWo4ZcUognO5d0t-PuDXh4nKI51u66FqDXCTb47sys"
+    },
+    {
+        "name": "Amer Abu Al Hayja",
+        "Age": 30,
+        "Email": "gt.amer.alhayja@orange.com",
+        "Profession": "Job Coach",
+        "Phone": "0776800869",
+        "Image": "https://media.licdn.com/dms/image/v2/D4E03AQGVCwfkv4TCbA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1708953968307?e=1741824000&v=beta&t=EPRRXNYoNWPqvz99SAc1nV-Sh2TAlNERoGI4boJ_upc"
+    },
+    {
+        "name": "Salam Almomani",
+        "Age": 26,
+        "Email": "gt.salam.almomani@orange.com",
+        "Profession": "Administrative Coordinator",
+        "Phone": "0776800943",
+        "Image": "https://media.licdn.com/dms/image/v2/D4E03AQF1QsYzdpx3OA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1709812748417?e=1741824000&v=beta&t=lj8AM63IHIRlmumxqpuPmvN6hJ0DSjcWGb1ZWU_banM"
+    },
+    {
+        "name": "Batool Aldalki",
+        "Age": 26,
+        "Email": "gt.batool.aldalki@orange.com",
+        "Profession": "Job Coach",
+        "Phone": "0776800915",
+        "Image": "https://media.licdn.com/dms/image/v2/D4E03AQHPavOJrAlApg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1673085050200?e=1741824000&v=beta&t=VywHeadMRdamMQ_OWxD_TAIovUra-OldTMEXAfCBZog"
+    }
+]
